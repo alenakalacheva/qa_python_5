@@ -6,8 +6,8 @@ from selenium.webdriver.support import expected_conditions
 
 #  Проверь переход по клику на «Личный кабинет».
 class TestProfilePage:
-    def test_follow_profile_button(self, get_driver):
-        driver = get_driver
+    def test_follow_profile_button(self, driver):
+        driver = driver
         driver.get(Urls.MAIN_URL)
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.LOGIN_BUTTON_MAIN))
 
@@ -23,8 +23,8 @@ class TestProfilePage:
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.LOGIN_INPUT))
         assert driver.find_element(*Locators.LOGIN_INPUT).get_attribute('value') == AuthInfo.EMAIL
 
-    def test_follow_constructor_button(self, get_driver):
-        driver = get_driver
+    def test_follow_constructor_button(self, driver):
+        driver = driver
         driver.get(Urls.MAIN_URL)
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.LOGIN_BUTTON_MAIN))
 
@@ -43,8 +43,8 @@ class TestProfilePage:
 
         assert driver.current_url == Urls.MAIN_URL
 
-    def test_follow_logo(self, get_driver):
-        driver = get_driver
+    def test_follow_logo(self, driver):
+        driver = driver
         driver.get(Urls.MAIN_URL)
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.LOGIN_BUTTON_MAIN))
 
@@ -63,8 +63,8 @@ class TestProfilePage:
 
         assert driver.current_url == Urls.MAIN_URL
 
-    def test_logout(self, get_driver):
-        driver = get_driver
+    def test_logout(self, driver):
+        driver = driver
         driver.get(Urls.MAIN_URL)
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.LOGIN_BUTTON_MAIN))
 
@@ -84,15 +84,3 @@ class TestProfilePage:
 
         assert driver.current_url == Urls.AUTHORIZATION_URL
 
-
-
-
-
-
-
-#  Проверь переход по клику на «Конструктор»
-
-#  и на логотип Stellar Burgers.
-
-
-#  Проверь выход по кнопке «Выйти» в личном кабинете.

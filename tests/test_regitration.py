@@ -7,9 +7,9 @@ from selenium.webdriver.support import expected_conditions
 
 
 class TestRegistration:
-    def test_registration_successful(self, get_driver):
+    def test_registration_successful(self, driver):
         email = f'alenakalacheva_5_{str(random.randint(100, 999))}@gmail.ru'
-        driver = get_driver
+        driver = driver
         driver.get(Urls.REGISTRATION_URL)
         driver.find_element(*Locators.NAME_INPUT).send_keys('Sam')
         driver.find_element(*Locators.EMAIL_INPUT).send_keys(email)
@@ -27,9 +27,9 @@ class TestRegistration:
 
         assert driver.find_element(*Locators.LOGIN_INPUT).get_attribute('value') == email
 
-    def test_registration_short_password(self, get_driver):
+    def test_registration_short_password(self, driver):
         email = f'alenakalacheva_5_{str(random.randint(100, 999))}@gmail.ru'
-        driver = get_driver
+        driver = driver
         driver.get(Urls.REGISTRATION_URL)
         driver.find_element(*Locators.NAME_INPUT).send_keys('Sam')
         driver.find_element(*Locators.EMAIL_INPUT).send_keys(email)

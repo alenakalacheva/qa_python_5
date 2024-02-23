@@ -37,6 +37,9 @@ class Locators:
     BUNS_LABEL = (By.XPATH, ".//h2[text()='Булки']")
     SAUCE_LABEL = (By.XPATH, ".//h2[text()='Соусы']")
     FILLING_LABEL = (By.XPATH, ".//h2[text()='Начинки']")
+    INGREDIENTS_LIST = (By.XPATH, ".//ul[starts-with(@class, 'BurgerIngredient')]")
+
+
 
 
 

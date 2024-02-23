@@ -6,8 +6,8 @@ from selenium.webdriver.support import expected_conditions
 
 
 class TestAuthorization:
-    def test_auth_main_page(self, get_driver):
-        driver = get_driver
+    def test_auth_main_page(self, driver):
+        driver = driver
         driver.get(Urls.MAIN_URL)
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.LOGIN_BUTTON_MAIN))
 
@@ -21,8 +21,8 @@ class TestAuthorization:
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.ORDER_BUTTON))
         assert driver.find_element(*Locators.ORDER_BUTTON)
 
-    def test_auth_profile_button(self, get_driver):
-        driver = get_driver
+    def test_auth_profile_button(self, driver):
+        driver = driver
         driver.get(Urls.MAIN_URL)
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.LOGIN_BUTTON_MAIN))
 
@@ -36,8 +36,8 @@ class TestAuthorization:
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.ORDER_BUTTON))
         assert driver.find_element(*Locators.ORDER_BUTTON)
 
-    def test_auth_registration_page(self, get_driver):
-        driver = get_driver
+    def test_auth_registration_page(self, driver):
+        driver = driver
         driver.get(Urls.REGISTRATION_URL)
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.REGISTRATION_BUTTON))
 
@@ -51,8 +51,8 @@ class TestAuthorization:
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.ORDER_BUTTON))
         assert driver.find_element(*Locators.ORDER_BUTTON)
 
-    def test_auth_recover_password(self, get_driver):
-        driver = get_driver
+    def test_auth_recover_password(self, driver):
+        driver = driver
         driver.get(Urls.RECOVER_PASSWORD)
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(Locators.RECOVER_BUTTON))
 
