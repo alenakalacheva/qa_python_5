@@ -2,9 +2,6 @@ from locators import Locators
 from urls import Urls
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
-import time
-
-
 
 class TestConstructor:
     def test_switch_sauce(self, driver):
